@@ -1,0 +1,29 @@
+ command line:
+   ./tb_newspaper_fsm_vhd_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  60874
+
+Thu May 28 19:50:06 2026
+
+Total Line Count = 945
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 76.034 Meg. 
+
+ Total signals 12
+ Total nets 7
+ Total signal drivers 7
+ Total blocks 6
+ Total primitive blocks 1
+ Total processes 4
+ntrace select -o on -n /tb_newspaper_fsm_vhd/clk 
+ntrace select -o on -n /tb_newspaper_fsm_vhd/reset 
+ntrace select -o on -n /tb_newspaper_fsm_vhd/n 
+ntrace select -o on -n /tb_newspaper_fsm_vhd/d 
+ntrace select -o on -n /tb_newspaper_fsm_vhd/y 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

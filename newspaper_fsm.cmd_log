@@ -1,0 +1,7 @@
+xst -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -intstyle ise -ifn newspaper_fsm.xst -ofn newspaper_fsm.syr
+ngdbuild -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -intstyle ise -dd _ngo -i -p acr2 newspaper_fsm.ngc newspaper_fsm.ngd
+cpldfit -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -intstyle ise -p xa2c*-*-* -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 newspaper_fsm.ngd
+XSLTProcess -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" newspaper_fsm_build.xml
+tsim -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -intstyle ise newspaper_fsm newspaper_fsm.nga
+taengine -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -intstyle ise -f newspaper_fsm -w --format html1 -l C:/Xilinx/newspaper_fsm/newspaper_fsm_html/tim/timing_report.htm
+hprep6 -ise "C:/Xilinx/newspaper_fsm/newspaper_fsm" -s IEEE1149 -i newspaper_fsm
